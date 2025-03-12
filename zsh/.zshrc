@@ -15,8 +15,8 @@ bindkey '^[[1;5C' forward-word
 
 #zstyle :compinstall filename '/home/giri/.zshrc'
 
-#autoload -Uz compinit
-#compinits
+autoload -Uz compinit
+compinit
 
 export LANG=en_IN.UTF-8
 
