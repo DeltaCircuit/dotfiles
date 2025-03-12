@@ -8,3 +8,4 @@ systemd
 mimeapps*
 RawTherapee
 awesome-wm-widgets
+**/*/spool/anacron/*
