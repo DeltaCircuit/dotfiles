@@ -2,6 +2,7 @@
 {
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
+  "includes": ["~/.config/waybar/modules.jsonc"],
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
@@ -23,17 +24,7 @@
     "clock#time",
     "tray"
   ],
-  "sway/mode": {
-    "format": "<span style=\"italic\">  {}</span>",
-    "tooltip": false
-  },
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": ["", ""],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}"
-  },
+
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
     "format-disconnected": "Disconnected ",
@@ -67,20 +58,6 @@
       "deactivated": ""
     }
   },
-  "tray": {
-    // "icon-size": 21,
-    "spacing": 10
-  },
-  "clock#time": {
-    "interval": 10,
-    "format": "{:%H:%M}",
-    "tooltip": false
-  },
-  "clock#date": {
-    "interval": 10,
-    "format": "  {:%Y-%m-%d %a}",
-    "tooltip-format": "{:%e %B %Y}"
-  },
   "cpu": {
     "format": "{usage}% ",
     "tooltip": false
@@ -88,77 +65,7 @@
   "memory": {
     "format": "{}% "
   },
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
-  },
-  "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
-  },
-  "pulseaudio#source": {
-    "format": "{format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": [""],
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 1%+",
-    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 1%-"
-  },
-  "pulseaudio#sink": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} ",
-    "format-bluetooth-muted": " {icon} ",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "󰋎",
-      "headset": "󰋎",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%+",
-    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%-"
-  },
+
   "custom/media": {
     "format": "{icon} {}",
     "return-type": "json",
@@ -182,10 +89,5 @@
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate"
     }
-  },
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "format": "{name}"
   }
 }
