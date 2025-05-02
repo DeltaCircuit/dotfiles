@@ -1,0 +1,3 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+1  0  anacron_daily  run-parts --report "$HOME"/.local/etc/cron.daily
