@@ -6,3 +6,35 @@ auto-format = true
 
 [lanugage-server.rust-analyzer]
 command = "rust-analyzer"
+
+[[language]]
+name = "python"
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
+auto-format = true
+
+
+[[language]]
+name = "yaml"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "yaml"] }
+auto-format = true
+
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+"https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/v1.32.3/_definitions.json" = "/*.{yaml,yml}"
+
+
