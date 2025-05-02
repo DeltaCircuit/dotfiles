@@ -8,12 +8,14 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+export PATH=$PATH:~/.local/bin
 unsetopt beep
 
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 
 #zstyle :compinstall filename '/home/giri/.zshrc'
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 autoload -Uz compinit
 compinit
