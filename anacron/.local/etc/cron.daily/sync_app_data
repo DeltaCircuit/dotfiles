@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SH_LIBS="$HOME/.local/entecloud/scripts/lib"
+export RCLONE_CONFIG=/vault/app_data/rclone/entecloud.onedrive.conf
+
+shopt -s nullglob 
+# Loop through each .sh file and source it
+for script in "$SH_LIBS"/*.sh; do
+    # Check if there are any .sh files before sourcing
+    [ -f "$script" ] && source "$script"
+done
+
+log_info app_data_sync "syncing gnucash"
+rclone sync /vault/app_data/gnucash app_data:gnucash --size-only
+log_info app_data_sync "gnucash sync completed"
+
+log_info app_data_sync "syncing obsidian"
+rclone sync /vault/app_data/obsidian app_data:obsidian --size-only
+log_info app_data_sync "obsidian sync completed"
