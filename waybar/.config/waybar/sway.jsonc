@@ -2,7 +2,7 @@
 {
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "includes": ["~/.config/waybar/modules.jsonc"],
+  "include": ["~/.config/waybar/modules.jsonc"],
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
@@ -22,7 +22,8 @@
     "battery",
     "clock#date",
     "clock#time",
-    "tray"
+    "tray",
+    "custom/power"
   ],
 
   "mpd": {
@@ -82,7 +83,7 @@
     "format": "⏻ ",
     "tooltip": false,
     "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-file": "~/.config/waybar/menu/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
       "shutdown": "shutdown",
       "reboot": "reboot",
