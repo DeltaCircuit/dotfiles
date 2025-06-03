@@ -1,5 +1,5 @@
 {
   // Use sway.jsonc for sway variant.
   // Use hyprland.jsonc for hyprland variant
-  "include": ["~/.config/waybar/hyprland.jsonc"]
+  "include": ["~/.config/waybar/sway.jsonc"]
 }
