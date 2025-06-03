@@ -54,7 +54,7 @@
   },
   "clock#time": {
     "interval": 10,
-    "format": "{:%H:%M}",
+    "format": "{:%H:%MD}",
     "tooltip": false
   },
   "clock#date": {
