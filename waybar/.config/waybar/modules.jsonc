@@ -7,7 +7,10 @@
   "sway/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
-    "format-icons": ["", ""],
+    "format-icons": [
+      "",
+      ""
+    ],
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
@@ -16,7 +19,6 @@
     "all-outputs": false,
     "format": "{name}"
   },
-
   // Hyprland Modules
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace r-1",
@@ -45,16 +47,20 @@
     },
     "separate-outputs": true
   },
-
   // Common
   "tray": {
     "icon-size": 21,
     "spacing": 10
   },
-  "clock": {
-    "format": "{:%H:%M %a}",
-    "timezone": "IST",
+  "clock#time": {
+    "interval": 10,
+    "format": "{:%H:%M}",
     "tooltip": false
+  },
+  "clock#date": {
+    "interval": 10,
+    "format": "  {:%Y-%m-%d}",
+    "tooltip-format": "{:%e %B %Y}"
   },
   "backlight": {
     "format": "{icon} {percent}%",
@@ -97,7 +103,13 @@
     "format-alt": "{icon}  {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
   },
   "network": {
     "format": "{ifname}",
@@ -127,7 +139,11 @@
       "phone": " ",
       "portable": " ",
       "car": " ",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click": "pavucontrol"
   },
@@ -135,7 +151,9 @@
     "format": "{format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
-    "format-icons": [""],
+    "format-icons": [
+      ""
+    ],
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 1%+",
     "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 1%-"
@@ -152,7 +170,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
@@ -173,17 +195,14 @@
   "cpu": {
     "format": "/ C {usage}% "
   },
-
   "memory": {
     "format": "/ M {}% "
   },
-
   "disk": {
     "interval": 30,
     "format": "D {percentage_used}% ",
     "path": "/"
   },
-
   // Custom Modules
   "custom/empty": {
     "format": ""
@@ -237,7 +256,6 @@
     "on-click-right": "hyprlock",
     "tooltip-format": "Left: Power menu\nRight: Lock screen"
   },
-
   // Groups
   "group/hardware": {
     "orientation": "inherit",
@@ -246,7 +264,12 @@
       "children-class": "not-memory",
       "transition-left-to-right": false
     },
-    "modules": ["custom/system", "disk", "cpu", "memory"]
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory"
+    ]
   },
   "group/tools": {
     "orientation": "inherit",
@@ -255,6 +278,10 @@
       "children-class": "not-memory",
       "transition-left-to-right": false
     },
-    "modules": ["custom/tools", "custom/hypridle", "custom/hyprshade"]
+    "modules": [
+      "custom/tools",
+      "custom/hypridle",
+      "custom/hyprshade"
+    ]
   }
 }
