@@ -52,15 +52,42 @@
     "icon-size": 21,
     "spacing": 10
   },
-  "clock#time": {
-    "interval": 10,
-    "format": "{:%H:%MD}",
-    "tooltip": false
+  "clock": {
+    "format": "{:%H:%M (%Z)}",
+    "tooltip-format": "{tz_list}",
+    "timezones": [
+      "Asia/Calcutta",
+      "America/New_York",
+      "America/Chicago"
+    ],
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down"
+    }
   },
   "clock#date": {
     "interval": 10,
     "format": "  {:%Y-%m-%d}",
-    "tooltip-format": "{:%e %B %Y}"
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
   "backlight": {
     "format": "{icon} {percent}%",
@@ -193,22 +220,40 @@
     }
   },
   "cpu": {
-    "format": "/ C {usage}% "
+    "interval": 1,
+    "tooltip": "CP",
+    "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+    "format-icons": [
+      "<span color='#69ff94'>▁</span>", // green
+      "<span color='#2aa9ff'>▂</span>", // blue
+      "<span color='#f8f8f2'>▃</span>", // white
+      "<span color='#f8f8f2'>▄</span>", // white
+      "<span color='#ffffa5'>▅</span>", // yellow
+      "<span color='#ffffa5'>▆</span>", // yellow
+      "<span color='#ff9977'>▇</span>", // orange
+      "<span color='#dd532e'>█</span>" // red
+    ]
   },
   "memory": {
-    "format": "/ M {}% "
+    "format": " {}% "
   },
   "disk": {
     "interval": 30,
-    "format": "D {percentage_used}% ",
+    "format": " {percentage_used}% ",
     "path": "/"
+  },
+  "disk#vault": {
+    "interval": 30,
+    "format": " {percentage_used}% ",
+    "path": "/vault",
+    "tooltip-format": "Vault usage: {percentage_used}%"
   },
   // Custom Modules
   "custom/empty": {
     "format": ""
   },
   "custom/system": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
   "custom/tools": {
@@ -267,6 +312,7 @@
     "modules": [
       "custom/system",
       "disk",
+      "disk#vault",
       "cpu",
       "memory"
     ]
