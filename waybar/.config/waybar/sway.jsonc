@@ -82,7 +82,8 @@
     "menu-actions": {
       "shutdown": "shutdown",
       "reboot": "reboot",
-      "suspend": "systemctl suspend",
+      "lock": "swaylock -f",
+      "suspend": "swayidle",
       "hibernate": "systemctl hibernate"
     }
   }
