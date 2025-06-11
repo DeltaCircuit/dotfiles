@@ -19,6 +19,10 @@
     "all-outputs": false,
     "format": "{name}"
   },
+  "sway/window": {
+    "max-length": 50,
+    "separate-outputs": true
+  },
   // Hyprland Modules
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace r-1",
