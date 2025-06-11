@@ -111,7 +111,7 @@
     "scroll-step": 1
   },
   "bluetooth": {
-    "format": " {status}",
+    "format": " {num_connections}",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
@@ -140,8 +140,8 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": "  {ifname}",
+    "format-wifi": " ",
+    "format-ethernet": "",
     "format-disconnected": "Disconnected ⚠",
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",

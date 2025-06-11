@@ -101,6 +101,11 @@ button:hover {
   color: @text;
 }
 
+#bluetooth.connected {
+  background-color: @green;
+  color: @crust;
+}
+
 #window,
 #workspaces {
   margin: 0 4px;
