@@ -17,8 +17,6 @@
   "modules-right": [
     "mpd",
     "idle_inhibitor",
-    "pulseaudio#source",
-    "pulseaudio#sink",
     "network",
     "bluetooth",
     "group/hardware",
@@ -27,6 +25,8 @@
     "clock",
     "clock#date",
     "tray",
+    "pulseaudio#source",
+    "pulseaudio#sink",
     "custom/power"
   ],
   "mpd": {
