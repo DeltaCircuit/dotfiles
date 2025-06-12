@@ -22,11 +22,17 @@ compinit
 
 export LANG=en_IN.UTF-8
 
+enabled_modules=(asdf fzf p10k syntax_highlight zsh-autocompletion)
+
 # Load ZSH helpers
 for DOTFILE in `find ~/.local/zsh_helpers/`
 do
-  source "$DOTFILE"
-  [ -f “$DOTFILE” ] && source “$DOTFILE”
+  current_module="${DOTFILE##*/}"  
+  if [[ ${enabled_modules[@]} =~ $current_module ]]
+  then
+    source "$DOTFILE"
+    [ -f “$DOTFILE” ] && source “$DOTFILE”
+  fi
 done
 
 # Load generic shell helpers
