@@ -22,7 +22,7 @@ compinit
 
 export LANG=en_IN.UTF-8
 
-enabled_modules=(asdf fzf syntax_highlight zsh-autocompletion)
+enabled_modules=(asdf fzf syntax_highlight zsh-autocompletion starship)
 
 # Load ZSH helpers
 for DOTFILE in `find ~/.local/zsh_helpers/`
