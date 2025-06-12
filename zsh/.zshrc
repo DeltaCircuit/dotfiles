@@ -22,7 +22,7 @@ compinit
 
 export LANG=en_IN.UTF-8
 
-enabled_modules=(asdf fzf p10k syntax_highlight zsh-autocompletion)
+enabled_modules=(asdf fzf syntax_highlight zsh-autocompletion)
 
 # Load ZSH helpers
 for DOTFILE in `find ~/.local/zsh_helpers/`
@@ -37,7 +37,7 @@ done
 
 # Load generic shell helpers
 for helper in `find ~/.local/maverick/shell_helpers`
-do
+do  
   source "$helper"
 done
 
