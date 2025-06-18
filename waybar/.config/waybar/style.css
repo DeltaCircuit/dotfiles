@@ -1,4 +1,5 @@
 @import "mocha.css";
+@import "styles/workspaces.css";
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -9,7 +10,7 @@
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
+  /* margin: 5px 5px; */
 }
 
 window#waybar.hidden {
@@ -72,7 +73,7 @@ button:hover {
 #bluetooth,
 #mpd {
   background-color: @surface0;
-  padding: 0 10px;
+  padding: 0.4em;
   color: @text;
 }
 
@@ -81,8 +82,7 @@ button:hover {
   color: @crust;
 }
 
-#window,
-#workspaces {
+#window {
   margin: 0 4px;
 }
 
@@ -317,31 +317,3 @@ label:focus {
 #privacy-item.audio-out {
   background-color: #0069d4;
 }
-
-/* WORKSPACES */
-
-#workspaces {
-  background-color: @surface0;
-}
-
-#workspaces button {
-  color: @text;
-  padding: 0.4rem;
-}
-
-/* SWAY WORKSPACES */
-#workspaces button.visible {
-}
-#workspaces button.focused {
-  background-color: @surface2;
-}
-#workspaces button.urgent {
-  background-color: @red;
-}
-#workspaces button.persistent {
-}
-#workspaces button.empty {
-}
-#workspaces button.current_output {
-}
-/* #workspaces button#sway-workspace-${name} */

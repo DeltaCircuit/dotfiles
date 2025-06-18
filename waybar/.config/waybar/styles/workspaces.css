@@ -1,0 +1,27 @@
+/* WORKSPACES */
+
+#workspaces {
+  background-color: @surface0;
+}
+
+#workspaces button {
+  color: @text;
+  padding: 0.4rem;
+}
+
+/* SWAY WORKSPACES */
+#workspaces button.visible {
+}
+#workspaces button.focused {
+  background-color: @surface2;
+}
+#workspaces button.urgent {
+  background-color: @red;
+}
+#workspaces button.persistent {
+}
+#workspaces button.empty {
+}
+#workspaces button.current_output {
+}
+/* #workspaces button#sway-workspace-${name} */
