@@ -15,9 +15,7 @@
     "tooltip-format": "{app}: {title}"
   },
   "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "format": "{name}"
+    "disable-scroll": true
   },
   "sway/window": {
     "max-length": 50,
