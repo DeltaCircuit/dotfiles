@@ -1,0 +1,17 @@
+@keyframes flash_background {
+  0% {
+    background-color: @surface0;
+    color: @text;
+  }
+  100% {
+    background-color: @red;
+    color: @crust;
+  }
+}
+
+#custom-mic_access {
+  animation: flash_background 0.8s infinite ease-in-out;  
+  background-color: @red;
+  color: @crust;
+  outline: 1px solid limegreen;
+}

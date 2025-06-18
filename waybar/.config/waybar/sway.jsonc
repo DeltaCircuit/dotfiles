@@ -25,6 +25,7 @@
     "clock",
     "clock#date",
     "tray",
+    "custom/mic_access",
     "pulseaudio#source",
     "pulseaudio#sink",
     "custom/power"

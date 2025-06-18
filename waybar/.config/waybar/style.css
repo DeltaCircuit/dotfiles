@@ -1,5 +1,6 @@
 @import "mocha.css";
 @import "styles/workspaces.css";
+@import "styles/custom/mic_access.css";
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */

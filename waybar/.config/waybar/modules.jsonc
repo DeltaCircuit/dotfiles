@@ -332,5 +332,10 @@
       "custom/hypridle",
       "custom/hyprshade"
     ]
+  },
+  "custom/mic_access": {
+    "interval": 1,
+    "exec": "~/.config/waybar/custom/mic_access.sh",
+    "return-type": "json"
   }
 }
