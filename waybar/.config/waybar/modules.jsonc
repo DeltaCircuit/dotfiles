@@ -337,5 +337,10 @@
     "interval": 1,
     "exec": "~/.config/waybar/custom/mic_access.sh",
     "return-type": "json"
+  },
+  "custom/camera_access": {
+    "interval": 1,
+    "exec": "~/.config/waybar/custom/camera_access.sh",
+    "return-type": "json"
   }
 }
