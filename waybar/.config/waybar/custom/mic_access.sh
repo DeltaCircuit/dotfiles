@@ -12,7 +12,7 @@ then
     for item in "${media_names[@]}"; do
         tooltip+=" $item"$'\r'
     done      
-    echo "{\"text\": \" 󰻍 \", \"tooltip\": \"$tooltip\" }"
+    echo "{\"text\": \" 󰢴 \", \"tooltip\": \"$tooltip\" }"
 else
     echo '{}'
 fi
