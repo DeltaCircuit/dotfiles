@@ -1,2 +1,2 @@
-require 'kuttichathan.options'
+require 'kuttichathan.core.options'
 require 'kuttichathan.setup_lazy'
