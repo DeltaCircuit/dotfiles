@@ -10,7 +10,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = "kuttichathan.plugins",
+    spec = "kuttichathan.lazy",
     change_detection = {
         notify = false
     }
