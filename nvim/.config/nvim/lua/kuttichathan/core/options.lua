@@ -28,3 +28,4 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.cmdheight = 0
+vim.diagnostic.config({ virtual_text = true })
