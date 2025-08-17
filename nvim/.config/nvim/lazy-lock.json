@@ -118,5 +118,9 @@
 	"vim-fugitive": {
 		"branch": "master",
 		"commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4"
+	},
+	"which-key.nvim": {
+		"branch": "main",
+		"commit": "370ec46f710e058c9c1646273e6b225acf47cbed"
 	}
 }
