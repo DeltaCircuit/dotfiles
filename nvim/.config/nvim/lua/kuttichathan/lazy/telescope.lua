@@ -53,14 +53,7 @@ return {
 			end
 
 			nmap("<leader>ff", builtin.find_files, "[F]ind [F]iles")
-			nmap("<leader>fg", function()
-				builtin.live_grep({
-					hidden = true,
-					additional_args = function(args)
-						return vim.list_extend(args, { "--no-ignore", "--hidden" })
-					end,
-				})
-			end, "[F]ind by [G]rep")
+			nmap("<leader>fg", builtin.live_grep, "[F]ind by [G]rep")
 			nmap("<leader>fb", builtin.buffers, "[F]ind open [B]uffers")
 			nmap("<leader>fh", builtin.help_tags, "[F]ind [H]elp tags")
 			nmap("<leader>/", function()
